@@ -17,7 +17,7 @@ class YahooFinance:
         return r.json()
 
     def generate_ohlc(self, range="7d", interval="5m"):
-        r = self._fetch_short_ohlc(self.symbol, range, interval)
+        r = self._fetch_short_ohlc(range, interval)
 
         bars = pd.DataFrame()
 
